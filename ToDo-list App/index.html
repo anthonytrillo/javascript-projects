@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do List App</title>
+    <!-- Bootswatch Cosmo Theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Lista de tareas</a>
+    </nav>
+
+
+    <div class="container">
+        <!-- APPLICATION -->
+        <div id="App" class="row pt-5">
+
+            <!-- FORM -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Agregar una tarea</h4>
+                    </div>
+                    <form id="task-form" class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="title" name="title" placeholder="Título" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <textarea type="text" rows="5" cols="50" id="description" name="description" placeholder="Descripción" class="form-control"></textarea>
+                        </div>
+                        <input type="submit" value="Guardar" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+            </div>
+
+            <!-- TASKS LIST -->
+            <div id="task-list" class="col-md-8">
+                <!-- <div class="card text-center mb-4">
+                    <div class="card-body">
+                        <strong>Título</strong>: Tarea -
+                        <strong>Descripción</strong>: descripción
+                        <button href="#" class="btn btn-danger" id="title" name="delete" value="title">Delete</button>
+                    </div>
+                </div> -->
+            </div>
+
+        </div>
+    </div>
+
+    <script src="App.js" type="module"></script>
+</body>
+
+</html>
