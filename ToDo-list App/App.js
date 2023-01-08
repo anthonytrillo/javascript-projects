@@ -90,8 +90,18 @@ taskForm.addEventListener('submit', (e) => {
     const titleTask = form.get('title');
     const descriptionTask = form.get('description');
 
-    // Podemos explicar Hoisting en esta parte
-    const task = createTask(titleTask, descriptionTask);
-    // console.log(task)
-    addTask(task);
+    if (titleTask.trim().length === 0 || descriptionTask.trim().length === 0) {
+        Toastify({
+            text: 'Debe completar todos los campos.',
+            position: 'center',
+            gravity: 'bottom',
+            duration: 3000,
+            style: {
+                background: '#373a3c'
+            }
+        }).showToast()
+    } else {
+        const task = createTask(titleTask, descriptionTask);
+        addTask(task);
+    }
 });
